@@ -12,4 +12,6 @@ ios_config "vlan 99" "name MANAGEMENT" "vlan 100" "name SERVERS" "vlan 110" "nam
 #configuration of the VLAN that wil suspend the ports unused and name the native VLAN
 ios_config "vlan 999" "name PARKING_LOT" "state suspend" "vlan 666" "name NATIVE_DO_NOT_USE" "exit"
 
+#configuring SPT primary for vlan 99,100 and secondary for vlan 110,120
+ios_config "spanning-tree vlan 99,100 root primary" "spanning-tree vlan 110,120 root secondary" "exit"
 }
