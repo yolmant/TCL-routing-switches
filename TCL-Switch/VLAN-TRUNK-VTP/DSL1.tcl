@@ -20,3 +20,9 @@ ios_config "interface range g1/0/7-12" "switchport trunk allowed vlan except 1,9
 
 #Place all the ports that are not used to the VLAN 999
 ios_config "interface range g1/0/1-5, g1/0/13-24, g1/1/1-2" "switchport mode access" "switchport nonegotiate" "switchport access vlan 999" "shutdown" "exit"
+
+#After tis point the switch would be able to connect wit the other switches
+#The next step will configure our switch to work with VTP version 3. it could be avoid it if you want your network with version 2
+ios_config "vtp version 3" "vtp primary vlan" 
+
+}
