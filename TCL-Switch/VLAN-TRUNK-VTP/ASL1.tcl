@@ -8,3 +8,5 @@ ios_config "vtp domain SWLAB" "vtp password cisco123" "end"
 
 #Place all the ports that are not used in VLAN 999
 ios_config "interface range f0/1-5, f0/13-24, g0/1-2" "switchport mode access" "switchport nonegotiate" "switchport access vlan 999" "shutdown" "exit"
+
+}
