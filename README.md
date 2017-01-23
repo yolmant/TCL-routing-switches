@@ -4,3 +4,5 @@ This repository contains some of the common configuration for Router and Switche
 in TCL lenguage
 
 feel free to make any comment and forking any file
+
+Note: remember that some of the commands and configurations might vary depend on the devices and IOS software version
