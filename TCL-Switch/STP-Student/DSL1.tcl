@@ -1,7 +1,8 @@
 puts [ open flash:Lab4 w+ ] {
 
-#VTP version 3 configuration. make it the primary 
-ios_config "vtp domain SWLAB" "vtp version 3" "vtp mode server" "vtp primary vlan" "exit"
+#VTP version 3 configuration.
+ios_config "vtp domain SWLAB" "vtp version 3" "vtp mode server" "exit"
+vtp primary vlan
 
 #configure the trunk encapsulation in the ports 7 to 12. change the native VLAN 1 to VLAN 666. configure the interfaces to be trunk and unset the negotiation between ports
 ios_config "interface range g1/0/7-12" "switchport trunk encapsulation dot1q" "switchpor trunk native vlan 666" "switchport mode trunk" "switchport nonegotiate" "no shutdown" "end"
