@@ -1,4 +1,4 @@
-#this script will successfully work in switches 2960. for other switches like 3650 erase the command "sdm prefer dual-ipv4-and-ipv6 routing"
+#this script will successfully work in switches 2960. for other switches like 3560 erase the command "sdm prefer dual-ipv4-and-ipv6 routing"
 
 puts [ open flash:Reset.tcl w+ ] {
 typeahead "\n"
