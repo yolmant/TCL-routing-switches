@@ -13,8 +13,10 @@ ios_config "vlan 99" "name MANAGEMENT" "vlan 100" "name SERVERS" "vlan 110" "nam
 ios_config "vlan 999" "name PARKING_LOT" "state suspend" "vlan 666" "name NATIVE_DO_NOT_USE" "exit"
 
 #configure the trunk encapsulation in the ports 7 to 12. change the native VLAN 1 to VLAN 666. configure the interfaces to be trunk and unset the negotiation between ports
-ios_config "interface range f0/7-12" "switchport trunk encapsulation dot1q" "switchpor trunk native vlan 666" "switchport mode trunk" "switchport nonegotiate" "no shutdown" "end"
+ios_config "interface range g1/0/7-12" "switchport trunk encapsulation dot1q" "switchpor trunk native vlan 666" "switchport mode trunk" "switchport nonegotiate" "no shutdown" "end"
 
 #disallowing VLAN 1 & 999
-ios_config "interface range f0/7-12" "switchport trunk allowed vlan except 1,999"
+ios_config "interface range g1/0/7-12" "switchport trunk allowed vlan except 1,999"
 
+#Place all the ports that are not used to the VLAN 999
+ios_config "interface range g1/0/1-5, g1/0/13-24, g1/1/1-2" "switchport mode access" "switchport nonegotiate" "switchport access vlan 999" "shutdown" "exit"
