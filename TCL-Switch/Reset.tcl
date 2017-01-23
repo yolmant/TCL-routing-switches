@@ -1,5 +1,5 @@
 #this script will successfully work in switches 3560. 
-#for other switches like 2960 substitute the command "sdm prefer dual-ipv4-and-ipv6 routing" to "lanbase-routing"
+#for other switches like 2960 substitute the command "sdm prefer dual-ipv4-and-ipv6 routing" to "sdm prefer lanbase-routing"
 
 puts [ open flash:Reset.tcl w+ ] {
 typeahead "\n"
