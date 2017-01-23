@@ -1,4 +1,4 @@
-puts [ open flash:Lab3-1 w+ ] {
+puts [ open flash:Lab4 w+ ] {
 
 #VTP version 3 configuration. make it the primary 
 ios_config "vtp domain SWLAB" "vtp version 3" "vtp mode server" "vtp primary vlan" "exit"
