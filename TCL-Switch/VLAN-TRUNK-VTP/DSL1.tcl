@@ -25,4 +25,16 @@ ios_config "interface range g1/0/1-5, g1/0/13-24, g1/1/1-2" "switchport mode acc
 #The next step will configure our switch to work with VTP version 3. it could be avoid it if you want your network with version 2
 ios_config "vtp version 3" "vtp primary vlan" 
 
+#create new VLANs to demostate the function of VTP primary
+ios_config "vlan 510" "name TEST510" "exit"
+ios_config "vlan 511" "name TEST511" "exit"
+ios_config "vlan 512" "name TEST512" "exit"
+ios_config "vlan 513" "name TEST513" "exit"
+ios_config "vlan 514" "name TEST514" "exit"
+ios_config "vlan 515" "name TEST515" "exit"
+ios_config "vlan 1500" "name TEST-EXT-1500" "exit"
+
+#disable VLAN
+ios_config "no vlan 510-514" "end"
+
 }
