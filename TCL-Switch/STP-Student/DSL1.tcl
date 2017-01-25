@@ -15,4 +15,8 @@ ios_config "vlan 999" "name PARKING_LOT" "state suspend" "vlan 666" "name NATIVE
 
 #configuring SPT primary for vlan 99,100 and secondary for vlan 110,120
 ios_config "spanning-tree vlan 99,100 root primary" "spanning-tree vlan 110,120 root secondary" "exit"
+
+#implementing Root Guard
+ios_config "interface g1/0/7" "spanning-tree guard root" "exit"
+
 }
