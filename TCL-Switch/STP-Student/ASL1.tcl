@@ -14,4 +14,10 @@ ios_config "interface g1/0/6" "spanning-tree portfast" "shutdown"
 
 #BPDU implemented in a prot connected to a host
 ios_config "interface g1/0/6" "spanning-tree bpduguard enable" "exit"
+
+#change the priority of the vlan to be the root
+ios_config "spanning-tree vlan 100 priority 16384"
+
+#After observe the changes. remove the previously commmand to clean the switch as we had before
+ios_config "no spanning-tree vlan 100 priority 16384"
 }
