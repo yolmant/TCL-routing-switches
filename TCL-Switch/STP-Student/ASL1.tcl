@@ -20,4 +20,10 @@ ios_config "spanning-tree vlan 100 priority 16384"
 
 #After observe the changes. remove the previously commmand to clean the switch as we had before
 ios_config "no spanning-tree vlan 100 priority 16384"
+
+#implementing guard loop
+ios_config "interface g1/0/11" "spanning-tree bpdufilter enable" "exit"
+
+#after observe that the port was blocking disable
+ios_config "interface g1/0/11" "spanning-tree bpdufilter disable" "exit"
 }
