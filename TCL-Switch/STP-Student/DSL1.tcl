@@ -28,7 +28,7 @@ debug span eve
 ios_config "interface g1/0/11" "shutdown" "exit"
 
 #configuration of RPVST and clean any information of PVST
-ios_config "spanning-tree mode rapid-pvst
+ios_config "spanning-tree mode rapid-pvst"
 clear spanning-tree mode detected-protocols
 
 #debuging to observer convergence
