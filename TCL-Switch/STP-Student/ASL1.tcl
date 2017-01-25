@@ -11,4 +11,7 @@ ios_config "interface g1/0/6" "switchport mode access" "switchport access vlan 1
 
 #activate the portfast 
 ios_config "interface g1/0/6" "spanning-tree portfast" "shutdown"
+
+#BPDU implemented in a prot connected to a host
+ios_config "interface g1/0/6" "spanning-tree bpduguard enable" "exit"
 }
