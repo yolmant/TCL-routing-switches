@@ -16,6 +16,25 @@ ios_config "vlan 999" "name PARKING_LOT" "state suspend" "vlan 666" "name NATIVE
 #configuring SPT primary for vlan 99,100 and secondary for vlan 110,120
 ios_config "spanning-tree vlan 99,100 root primary" "spanning-tree vlan 110,120 root secondary" "exit"
 
+#to observe the manipulation of the root port we shutdown the next ports
+ios_config "interface range g1/0/9-10" "shutdown" "exit"
+
+#change the port priority to make the interface 8 as root port
+ios_config "interface f0/8" "spanning-tree port-priority 112" "exit"
+
+#form this part of the script you will compare the time of convergece between PVST and RPVST
+#this commands will show you ho long the switch converge when you shut down interfaces (observe the convergence of PVST
+debug span eve
+ios_config "interface g1/0/11" "shutdown" "exit"
+
+#configuration of RPVST and clean any information of PVST
+ios_config "spanning-tree mode rapid-pvst
+clear spanning-tree mode detected-protocols
+
+#debuging to observer convergence
+debug spanning-tree events
+ios-config "interface g1/0/11" "no shutdown" "exit"
+
 #implementing Root Guard
 ios_config "interface g1/0/7" "spanning-tree guard root" "exit"
 
