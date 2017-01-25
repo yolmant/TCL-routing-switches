@@ -1,5 +1,5 @@
 #this script will successfully work in switches 3560 and it will reset the switch to the original configuration
-#for other switches like 2960 substitute the command "sdm prefer dual-ipv4-and-ipv6 routing" to "sdm prefer lanbase-routing"
+#for other switches like 2960 substitute the command "sdm prefer dual-ipv4-and-ipv6 routing" to "sdm prefer lanbase-routing" or simply erase it
 
 puts [ open flash:Reset.tcl w+ ] {
 typeahead "\n"

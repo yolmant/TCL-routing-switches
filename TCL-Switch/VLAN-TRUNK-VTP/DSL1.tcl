@@ -1,3 +1,4 @@
+
 puts [ open flash:Lab3-1 w+ ] {
 
 #configuration of Management VLAN
@@ -23,7 +24,8 @@ ios_config "interface range g1/0/1-5, g1/0/13-24, g1/1/1-2" "switchport mode acc
 
 #After tis point the switch would be able to connect wit the other switches
 #The next step will configure our switch to work with VTP version 3. it could be avoid it if you want your network with version 2
-ios_config "vtp version 3" "vtp primary vlan" 
+ios_config "vtp version 3" 
+vtp primary vlan 
 
 #create new VLANs to demostate the function of VTP primary
 ios_config "vlan 510" "name TEST510" "exit"
