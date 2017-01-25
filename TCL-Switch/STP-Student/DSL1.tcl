@@ -19,4 +19,6 @@ ios_config "spanning-tree vlan 99,100 root primary" "spanning-tree vlan 110,120 
 #implementing Root Guard
 ios_config "interface g1/0/7" "spanning-tree guard root" "exit"
 
+#After observe the changes. remove the previously commmand to clean the switch as we had before
+ios_config "interface g1/0/7" "no spanning-tree guard root" "exit"
 }
