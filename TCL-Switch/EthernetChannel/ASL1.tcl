@@ -9,7 +9,4 @@ ios_config "interface range g1/0/7-8" "shutdown" "channel-group 2 mode active" "
 
 #creating port-channels to misconfigure the network
 ios_config "interface range g1/0/9-10" "shutdown" "channel-group 3 mode active" "no shutdown" "exit"
-
-#configure load-balancing
-ios_config "port-channel load-balance src-dst-ip"
 }
