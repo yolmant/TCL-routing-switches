@@ -6,3 +6,4 @@ ios_config "interface range g1/0/7-8" "shurdown" "channel-group 2 mode active" "
 
 #configure port-channel 12
 ios_config "interface range g1/0/11-12" "shutdown" "channel-group 12 mode on" "no shutdown" "exit"
+}
