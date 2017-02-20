@@ -11,3 +11,4 @@ ios_config "interface range g1/0/11-12" "shutdown" "channel-group 12 mode on" "n
 ios_config "no interface port-channel 40" "exit"
 
 #remember to reset the other ports-channel
+}
