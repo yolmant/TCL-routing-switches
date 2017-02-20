@@ -12,3 +12,4 @@ ios_config "interface range g1/0/9-10" "shutdown" "channel-group 3 mode active" 
 
 #configure load-balancing
 ios_config "port-channel load-balance src-dst-ip"
+}
