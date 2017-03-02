@@ -15,3 +15,9 @@ ios_config "interface port-channel 2" "ip address 176.16.12.1 255.255.255.252" "
 
 #configuring a static default route
 ios_config "ip route 0.0.0.0 0.0.0.0 port-channel 2 172.16.12.2"
+
+#configuring EtherChannel Links as leyer 2 PagP
+ios_config "interface range g1/0/7-8" "switchport mode trunk" "switchport trunk allowed vlan except 110" "channel-group 1 mode desirable" "no shutdown" "exit"
+
+#configuring static routes accross the network
+ios_config "ip route 10.1.100.0 255.255.255.0 vlan 99
