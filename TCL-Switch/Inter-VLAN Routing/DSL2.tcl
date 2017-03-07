@@ -9,7 +9,7 @@ ios_config "interface vlan 120" "ip address 10.1.120.1 255.255.255.0" "no shutdo
 ios_config "interface lo1" "ip address 192.168.1.1 255.255.255.0" "no shutdown" "exit"
 
 #assigning interface to a host
-ios_config "interface g1/0/6" "switchport host" "switchport access vlan 110" "no shutdown "exit"
+ios_config "interface g1/0/6" "switchport host" "switchport access vlan 110" "no shutdown" "exit"
 
 #convert the link with DSL1 to layer 3
 ios_config "interface range g1/0/11-12" "no switchport" "channel-group 2 mode desirable" "no shutdown" "exit"
