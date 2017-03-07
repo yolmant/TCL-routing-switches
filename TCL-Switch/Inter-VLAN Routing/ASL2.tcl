@@ -9,3 +9,4 @@ ios_config "vlan 120" "name MGMT2" "exit" "interface vlan 120" "ip address 10.1.
 
 #assigning a default-gateway
 ios_config "ip default-gateway 10.1.120.1"
+}
