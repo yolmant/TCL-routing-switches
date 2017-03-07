@@ -13,7 +13,7 @@ ios_config "interface g1/0/6" "switchport host" "switchport access vlan 110" "no
 
 #convert the link with DSL1 to layer 3
 ios_config "interface range g1/0/11-12" "no switchport" "channel-group 2 mode desirable" "no shutdown" "exit"
-ios_config "interface port-channel 2" "ip address 172.16.12.2 255.255.255.252" "no shutdown "exit"
+ios_config "interface port-channel 2" "ip address 172.16.12.2 255.255.255.252" "no shutdown" "exit"
 
 #configuring a static default route
 ios_config "ip route 0.0.0.0 0.0.0.0 port-channel 2 172.16.12.1"
