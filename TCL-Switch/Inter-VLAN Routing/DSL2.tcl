@@ -24,3 +24,4 @@ ios_config "interface range g1/0/9-10" "switchport mode trunk" "switchport trunk
 
 #configuring static route accross the network
 ios_config "ip route 10.1.100.0 255.255.255.0 vlan 110
+}
