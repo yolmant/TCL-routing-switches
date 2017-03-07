@@ -22,3 +22,4 @@ ios_config "interface g1/0/6" "switchport host" "switchport access vlan 100" "no
 #configuring static routes accross the nerwork
 ios_config "ip route 192.168.1.0 255.255.255.0 vlan 110"
 ios_config "ip route 0.0.0.0 0.0.0.0 10.1.99.1
+}
